@@ -37,4 +37,10 @@ def getPostsByCategory(category_id):
     return res
 
 
+def addPost(category_id, text):
+    open()
+    cursor.execute("INSERT INTO post (category_id, text) VALUES (?,?);", 
+                   [category_id, text])
+    conn.commit()
+    close()
 
